@@ -1,0 +1,99 @@
+$coolblue: #7098B5;
+$darkblue: #255791;
+$s-mobile-view: "screen and (max-width: 360px)";
+$l-mobile-view: "screen and (min-width: 375px)";
+$tablet-view: "screen and (min-width: 768px)";
+$desktop-view: "screen and (min-width: 1024px)";
+$l-desktop-view: "screen and (min-width: 1200px)";
+
+$cubic-bezier-custom: cubic-bezier(.3,.13,.60,.89);
+$animation-time: .3s;
+
+body{
+    
+    font-family: 'Work Sans', sans-serif;
+    color: rgb(66, 66, 66);
+    font-size: 1rem;
+
+}
+
+
+a{
+    text-decoration: none;
+    color: $coolblue;
+
+    &:hover{
+        color: #464646;
+    }
+}
+
+h1{
+    font-size: 2.8rem;
+
+    @media #{$s-mobile-view}{
+        font-size: 2.6rem;
+    }
+
+}
+
+h2{
+    font-size: 2.6rem;
+    @media #{$s-mobile-view}{
+        font-size: 2.4rem;
+    }
+
+}
+
+h3{
+    font-size: 2.4rem;
+    @media #{$s-mobile-view}{
+        font-size: 2.2rem;
+    }
+
+}
+
+h4{
+    font-size: 2.2rem;
+    @media #{$s-mobile-view}{
+        font-size: 2.0rem;
+    }
+
+}
+
+h5{
+    font-size: 2rem;
+}
+
+h6{
+    font-size: 1.8rem;
+}
+
+
+p {
+    line-height: 1.6rem;
+}
+
+.btn{
+    background-color: $coolblue;
+    color: white;
+    // border: 1px solid black;
+    border-radius: 5px;
+    width: 70%;
+    float: right;
+    padding: 1.2em 1.6em;
+    font-size: 1rem;
+    border: 1px solid #7098B5;
+
+    &:hover{
+        background-color: rgb(65, 65, 65);
+    }
+
+    @media #{$tablet-view}{
+        width: 60%;
+    }
+
+    @media #{$desktop-view}{
+        width: 40%;
+    }
+
+}
