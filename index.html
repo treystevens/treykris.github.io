@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,600,700" rel="stylesheet">
-    <link href="styles/styles.css" type="text/css" rel="stylesheet"></link>
+    <link href="styles/styles.css" type="text/css" rel="stylesheet">
     
 
     <title>Trey Stevens</title>
@@ -33,11 +34,6 @@
                     <li class="nav-list__item-projects">
                         <a class="nav-list__item-link" href="#projects">
                         Projects
-                        </a>
-                    </li>
-                    <li class="nav-list__item-aboutme">
-                        <a class="nav-list__item-link" href="#about-me">
-                        About Me
                         </a>
                     </li>
                     <li class="nav-list__item-contact">
@@ -104,7 +100,6 @@
         </section>
 
         <section class="projects-flex" id="projects">
-            <p class="projects-demo-info">Hover over project image for a demo</p>
 
             <div class="projects">
                 <article class="project">
@@ -116,6 +111,7 @@
                                     <source src="https://res.cloudinary.com/dr4eajzak/video/upload/v1533598643/profile/lookid-video.mov" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
+                            <svg class="project__media-vid--overlay"enable-background="new 0 0 60 60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="m30 0c-16.542 0-30 13.458-30 30s13.458 30 30 30 30-13.458 30-30-13.458-30-30-30zm15.563 30.826-22 15c-.169.115-.366.174-.563.174-.16 0-.321-.038-.467-.116-.328-.173-.533-.513-.533-.884v-30c0-.371.205-.711.533-.884.328-.174.724-.15 1.031.058l22 15c.272.186.436.495.436.826s-.164.64-.437.826z"/></svg>
                         </div>
                         <div class="project__tools-container">
                             <ul class="project__tools-list">
@@ -142,6 +138,7 @@
                                 </li>
                             </ul>
                         </div>
+                        <p class="project__about">Are you a budget shopper looking for clothes? Ever wonder where someone got their piece of clothing? Do you want to be a part of a fashion community? LookID is just for you.</p>
                         <div class="project__actions">
                             <ul class="project__actions-list">
                                 <li class="project__actions-item">
@@ -171,6 +168,7 @@
                                     <source src="https://res.cloudinary.com/dr4eajzak/video/upload/v1533598607/profile/mm-video.mov" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
+                            <svg class="project__media-vid--overlay"enable-background="new 0 0 60 60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="m30 0c-16.542 0-30 13.458-30 30s13.458 30 30 30 30-13.458 30-30-13.458-30-30-30zm15.563 30.826-22 15c-.169.115-.366.174-.563.174-.16 0-.321-.038-.467-.116-.328-.173-.533-.513-.533-.884v-30c0-.371.205-.711.533-.884.328-.174.724-.15 1.031.058l22 15c.272.186.436.495.436.826s-.164.64-.437.826z"/></svg>
                         </div>
                         <div class="project__tools-container">
                             <ul class="project__tools-list">
@@ -219,6 +217,7 @@
                                 </li>
                             </ul>
                         </div>
+                        <p class="project__about">Mood Music will find songs that match your mood! Make a new playlist or import your Spotify playlist and save the songs that you like.</p>
                         <div class="project__actions">
                             <ul class="project__actions-list">
                                 <li class="project__actions-item">
@@ -241,24 +240,27 @@
                 </article>
             </div>
         </section>
-
-        <section class="about-me" id="about-me">
-            <div class="about-me-fx">
-                <h1 class="section-head">About Me</h1>
-              
-                    <p class="about-me-info">My name is Trey Stevens. I'm a twenty four year old self taught web developer from New York. I love to create things. That process of starting from nothing to having a product that people find useful or enjoyable is awesome to me. Chasing that desire is what led me to web development.</p> 
-                    <p class="about-me-info">I'm excited to deepen my understanding of JavaScript and learn more about user experience to build applications that will help solve problems.</p>
-            </div>
-        </section>
-
         <section class="contact" id="contact">
-            <h1 class="section-head">Contact</h1>
-            <p class="contact-me">Feel free to contact me at: 
+            
                 <a href="mailto:trey10027@gmail.com" class="contact-email">  
                     <img src="assets/mail-icon.png" class="contact-email__icon"/>
                     <span>trey10027@gmail.com</span>
                 </a>  
-            </p>
+            
+            
+            <form method="POST" action="https://formspree.io/trey10027@gmail.com" class="contact-form">
+                <label>Name:
+                    <input type="text" name="name" placeholder="Your name" class="contact-field">
+                </label>
+                <label>Email:
+                    <input type="email" name="email" placeholder="Your email" class="contact-field">
+                </label>
+                <label class="label--flex">Message:
+                <textarea name="message" placeholder="Your message" class="contact-message"></textarea>
+                </label>
+                <button class="btn btn--inline">Send</button>
+                <input type="hidden" name="_subject" value="New submission!" />
+              </form>
 
         </section>
     </div>
