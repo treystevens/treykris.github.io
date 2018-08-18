@@ -1,16 +1,22 @@
 $coolblue: #7098B5;
 $darkblue: #255791;
-$s-mobile-view: "screen and (max-width: 360px)";
-$l-mobile-view: "screen and (min-width: 375px)";
-$tablet-view: "screen and (min-width: 768px)";
-$desktop-view: "screen and (min-width: 1024px)";
-$l-desktop-view: "screen and (min-width: 1200px)";
+$s-mobile-view: "screen and (max-width: 22.5rem)";
+$l-mobile-view: "screen and (min-width: 23.4rem)";
+$tablet-view: "screen and (min-width: 48rem)";
+$desktop-view: "screen and (min-width: 64rem)";
+$l-desktop-view: "screen and (min-width: 85rem)";
 
 $cubic-bezier-custom: cubic-bezier(.3,.13,.60,.89);
 $animation-time: .3s;
 
-body{
-    
+
+html{
+    @media #{$l-desktop-view}{
+        font-size: 125%;
+    }
+}
+
+body{ 
     font-family: 'Work Sans', sans-serif;
     color: rgb(66, 66, 66);
     font-size: 1rem;
@@ -76,11 +82,10 @@ p {
 .btn{
     background-color: $coolblue;
     color: white;
-    // border: 1px solid black;
     border-radius: 5px;
     width: 70%;
     float: right;
-    padding: 1.2em 1.6em;
+    padding: 1.2rem 1.6rem;
     font-size: 1rem;
     border: 1px solid #7098B5;
 

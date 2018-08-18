@@ -94,18 +94,23 @@
 .nav-list{
     display: none;
     justify-content: space-between;
-    padding: 1.4rem;
+    padding-top: 1.4rem;
 
     @media #{$tablet-view}{
         display:-webkit-box;
         display:-ms-flexbox;
         display:flex;
-        width: 40%;
         padding: 1.5rem;
     }
 
-    @media #{$desktop-view}{
-        width: 25%;
+    
+
+    &__item{
+        @media #{$tablet-view}{
+            padding-right: 3rem;
+        }
+        
+        
     }
 
     &__item--active{
@@ -117,7 +122,7 @@
 .nav-mb{
     display: block;
     z-index: 10;
-    padding: 10px 1em;
+    padding: 10px 1rem;
 
 
     @media #{$tablet-view}{
@@ -158,7 +163,7 @@
             display: block;
             text-align: center;
             font-size: 1.4rem;
-            padding: 1.5em 1.8em;
+            padding: 1.5rem 1.8rem;
             width: 100%;
 
             @media (orientation: landscape) {
@@ -199,10 +204,12 @@
     height: 60vh;
 
     &-intro{
-        @extend .hero;
-        height: initial;
- 
-    
+       
+
+        &__intro{
+            text-align: center;
+        }
+
         &__name{
             font-weight: 600;
             color: rgb(56, 56, 56);
@@ -219,14 +226,15 @@
     }
 
     &__social-container{
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-            margin-top: 10px;
-        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        width: 80px;
+        max-width: 140px;
+        margin-top: 5px;
+
+        @media #{$tablet-view}{
+            width: 10%;
+        }
         
     }
 
@@ -242,23 +250,6 @@
     }
 }
 
-.projects-flex{
-    display:-webkit-box;
-    display:-ms-flexbox;
-    display:flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
--webkit-box-orient: vertical;
--webkit-box-direction: normal;
-    -ms-flex-direction: column;
-        flex-direction: column;
-
-
-        @media #{$l-desktop-view}{
-            align-items: center;
-        }
-}
 
 .projects{
     display:-webkit-box;
@@ -271,6 +262,7 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
         flex-direction: column;
+        
 
     @media #{$tablet-view}{
         -webkit-box-align: center;
@@ -294,6 +286,7 @@
 
     @media #{$l-desktop-view}{
         max-width: 1200px;
+        margin: 0 auto;
     }
 }
 
@@ -387,7 +380,7 @@
         &--overlay{
             fill: rgb(211, 211, 211);
             position: absolute;
-            height: 60px;
+            height: 3.75rem;
             position: absolute;
             pointer-events: none;
             top: 50%;
@@ -414,10 +407,10 @@
     }
 
     &__tools-container{
-        padding: 1.5em 0;
+        padding: 1.5rem 0;
 
         @media #{$tablet-view}{
-            padding: 1.5em;
+            padding: 1.5rem;
         
         }
         
@@ -429,18 +422,20 @@
         display: flex;
         -ms-flex-pack: distribute;
                 justify-content: space-around;
+
+    
+    & li{
+        margin-right: .4rem;
+    }
         
     }
 
     &__tools-tool{
-        height: 2rem;
-
-        @media #{$tablet-view}{
-            height: 2.2rem;
-        }
+        
+        height: 36px;
 
         @media #{$desktop-view}{
-            height: 2.5rem;
+            height: 40px;
         }
 
     }
@@ -471,17 +466,17 @@
 
     &__about{
         text-align: left;
-        padding: .8em 1.4em;
-        max-height: 200px;
+        padding: .8rem 1.4rem;
+        height: 12rem;
+        font-size: 16px;
 
         @media #{$tablet-view}{
-            // text-align: c;
-            max-height: 140px;
+            height: 10rem;
         }
 
 
         @media #{$desktop-view}{
-            max-height: 100px;
+            height: 8rem;
             text-align: justify;
         }
         
@@ -531,6 +526,7 @@
     padding-bottom: 20px;
     display: flex;
     flex-direction: column;
+    align-items:center;
 
     &-email{
         display: -webkit-inline-box;
@@ -572,7 +568,7 @@
         border: 1px solid $coolblue;
         border-radius: 5px;
         width: 100%;
-        padding: 2em;
+        padding: 2rem;
         margin-top: 20px;
 
         @media #{$tablet-view}{
@@ -614,7 +610,7 @@
             -ms-flex-direction: column;
                 flex-direction: column;
         margin-bottom: 20px;
-        line-height: 2em;
+        line-height: 2rem;
     }
 
     &-message{
