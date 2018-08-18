@@ -94,13 +94,13 @@
 .nav-list{
     display: none;
     justify-content: space-between;
-    padding-top: 1.4rem;
+    padding: 1.4rem;
 
     @media #{$tablet-view}{
         display:-webkit-box;
         display:-ms-flexbox;
         display:flex;
-        padding: 1.5rem;
+        
     }
 
     
@@ -123,7 +123,6 @@
     display: block;
     z-index: 10;
     padding: 10px 1rem;
-
 
     @media #{$tablet-view}{
         display: none;

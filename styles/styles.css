@@ -279,13 +279,12 @@ small {
 .nav-list {
   display: none;
   justify-content: space-between;
-  padding-top: 1.4rem; }
+  padding: 1.4rem; }
   @media screen and (min-width: 48rem) {
     .nav-list {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex;
-      padding: 1.5rem; } }
+      display: flex; } }
   @media screen and (min-width: 48rem) {
     .nav-list__item {
       padding-right: 3rem; } }
