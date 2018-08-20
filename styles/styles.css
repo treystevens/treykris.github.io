@@ -641,6 +641,9 @@ small {
   @media screen and (min-width: 64rem) {
     .contact-me {
       text-align: center; } }
+  .contact-error {
+    color: #d61212;
+    padding-bottom: 1.25rem; }
 
 .label--flex {
   display: flex;
