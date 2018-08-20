@@ -249,14 +249,14 @@
             </p>
             
             <form method="POST" action="https://formspree.io/trey10027@gmail.com" class="contact-form">
-                <label>Name:
-                    <input type="text" name="name" placeholder="Your name" class="contact-field">
+                <label class="contact-name__label">Name:
+                    <input type="text" name="name" placeholder="Your name" class="contact-field" required>
                 </label>
                 <label>Email:
-                    <input type="email" name="email" placeholder="Your email" class="contact-field">
+                    <input type="email" name="email" placeholder="Your email" class="contact-field" required>
                 </label>
                 <label class="label--flex">Message:
-                <textarea name="message" placeholder="Your message" class="contact-message"></textarea>
+                <textarea name="message" placeholder="Your message" class="contact-message" required></textarea>
                 </label>
                 <button class="btn btn--inline">Send</button>
             

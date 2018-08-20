@@ -1,6 +1,36 @@
 const desktopView = window.matchMedia('only screen and (min-width: 1024px)');
 
 
+// Contact Form validation
+document.querySelector('.contact-form').addEventListener('submit', (evt) => {
+    
+    const contactName = document.getElementsByClassName('contact-field')[0];
+    const contactEmail = document.getElementsByClassName('contact-field')[1];
+    const contactMessage = document.querySelector('.contact-message');
+    const contactError = document.querySelector('.contact-error');
+
+    // Remove error message if present
+    if(contactError) contactError.remove();
+    
+
+    if(contactName.value === '' || contactEmail.value === '' || contactMessage.value === '') {
+        evt.preventDefault();
+
+        // Create and show error message
+        const errorMessage = document.createElement('div');
+        const contactForm = document.querySelector('.contact-form');
+        const contactLabel = document.querySelector('.contact-name__label');
+
+        errorMessage.textContent = 'Please fill out all of the fields.';
+        errorMessage.classList.add('contact-error');
+        
+        contactForm.insertBefore(errorMessage, contactLabel);
+        return 1;
+    
+    }    
+});
+
+
 // Add mouse enter and mouse leave events to start and stop video
 document.querySelectorAll('.project__media-container').forEach((project) => {
     
@@ -31,7 +61,6 @@ document.querySelectorAll('.project__media-container').forEach((project) => {
         });    
 
 });
-
 document.querySelectorAll('.project__media-container').forEach((project) => {
     
     project.addEventListener('mouseleave', (evt) => {
@@ -54,5 +83,6 @@ document.querySelectorAll('.project__media-container').forEach((project) => {
 // Scroll just above hash location
 window.addEventListener("hashchange", function () {
     window.scrollTo(window.scrollX, window.scrollY - 20);
-  });
+});
+
 
