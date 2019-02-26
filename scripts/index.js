@@ -1,5 +1,3 @@
-const desktopView = window.matchMedia('only screen and (min-width: 1024px)');
-
 
 // Contact Form validation
 document.querySelector('.contact-form').addEventListener('submit', (evt) => {
@@ -30,29 +28,23 @@ document.querySelector('.contact-form').addEventListener('submit', (evt) => {
     }    
 });
 
-
 // Add mouse enter and mouse leave events to start and stop video
 document.querySelectorAll('.project__media-container').forEach((project) => {
     
-
     project.addEventListener('mouseenter', (evt) => {
-                
                 const projectImg = evt.target.children[0];
                 const projectVideo = evt.target.children[1];
                 const videoPlay = evt.target.children[2];
+                const projectImgRect = projectImg.getBoundingClientRect();
+                const currentWidth = projectImgRect.width;
                 
                 if(videoPlay){
                     videoPlay.remove();
                 }
                 
-                const projectImgRect = projectImg.getBoundingClientRect();
-                const currentWidth = projectImgRect.width;
-
-                projectVideo.style.width = currentWidth;
-
                 projectImg.style.display = 'none';
                 projectVideo.style.display = 'block';
-
+                projectVideo.style.width = currentWidth;
                 projectVideo.play();
 
                 if(projectVideo.ended){
@@ -64,16 +56,12 @@ document.querySelectorAll('.project__media-container').forEach((project) => {
 document.querySelectorAll('.project__media-container').forEach((project) => {
     
     project.addEventListener('mouseleave', (evt) => {
-
             if(evt.target.className === 'project__media-container'){
-                
                 const projectImg = evt.target.children[0];
                 const projectVideo = evt.target.children[1];
                 
                 projectImg.style.display = 'block';
                 projectVideo.style.display = 'none';
-                
-
                 projectVideo.pause();
             }
         });
