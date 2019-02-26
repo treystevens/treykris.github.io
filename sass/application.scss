@@ -74,9 +74,9 @@
     display:-webkit-box;
     display:-ms-flexbox;
     display:flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     background-color: white;
     position: fixed;
     width: 100%;
@@ -84,26 +84,25 @@
     z-index: 10;
 
     @media #{$tablet-view}{
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
         position: initial;
         border-bottom: initial;
     }
-
-
 }
 
 .nav-list{
-    display: none;
-    justify-content: space-between;
-    padding: 1.4rem;
-
-    @media #{$tablet-view}{
-        display:-webkit-box;
+    display:-webkit-box;
         display:-ms-flexbox;
         display:flex;
-        
-    }
+    justify-content: space-between;
+    padding: 1.4rem;
+    width: 100%;
 
-    
+    @media #{$tablet-view}{
+        width: initial;
+    }
 
     &__item{
         @media #{$tablet-view}{
@@ -119,62 +118,6 @@
     }
 }
 
-.nav-mb{
-    display: block;
-    z-index: 10;
-    padding: 10px 1rem;
-
-    @media #{$tablet-view}{
-        display: none;
-    }
-
-    @media #{$desktop-view}{
-        display: none;
-    }
-}
-
-
-.nav--show{
-        width: 100%;
-        padding-top: 70px;
-        position: absolute;
-        padding-left: 0;
-        padding-right: 0;
-        display:-webkit-box;
-        display:-ms-flexbox;
-        display:flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-        background-color: white;
-        border-radius: 5px;
-        border-bottom: 1px solid #8d8d8d;
-
-
-        @media (orientation: landscape) {
-            height: 100vh;
-            padding-top: 40px;
-        }
-        
-
-        a{
-            display: block;
-            text-align: center;
-            font-size: 1.4rem;
-            padding: 1.5rem 1.8rem;
-            width: 100%;
-
-            @media (orientation: landscape) {
-                font-size: 1rem;
-            }
-        }
-
-        li{
-            
-            width: 100%;
-        }
-} 
 
 .section-head{
     margin-bottom: 2%;
