@@ -47,10 +47,10 @@ document.querySelectorAll('.project__media-container').forEach((project) => {
                     projectVideo.style.display = 'block';
                     projectVideo.style.width = currentWidth;
                     projectVideo.play();
-                }
-                
-                if(projectVideo.ended){
-                    projectVideo.currentTime = 0;
+
+                    if(projectVideo.ended){
+                        projectVideo.currentTime = 0;
+                    }
                 }
         });    
 
@@ -63,8 +63,11 @@ document.querySelectorAll('.project__media-container').forEach((project) => {
                 const projectVideo = evt.target.children[1];
                 
                 projectImg.style.display = 'block';
-                projectVideo.style.display = 'none';
-                projectVideo.pause();
+                if(projectVideo){
+                    projectVideo.style.display = 'none';
+                    projectVideo.pause();
+                }
+                
             }
         });
 
