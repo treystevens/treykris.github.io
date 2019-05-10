@@ -42,11 +42,13 @@ document.querySelectorAll('.project__media-container').forEach((project) => {
                     videoPlay.remove();
                 }
                 
-                projectImg.style.display = 'none';
-                projectVideo.style.display = 'block';
-                projectVideo.style.width = currentWidth;
-                projectVideo.play();
-
+                if(projectVideo){
+                    projectImg.style.display = 'none';
+                    projectVideo.style.display = 'block';
+                    projectVideo.style.width = currentWidth;
+                    projectVideo.play();
+                }
+                
                 if(projectVideo.ended){
                     projectVideo.currentTime = 0;
                 }
